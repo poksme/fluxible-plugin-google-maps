@@ -24,7 +24,10 @@ Add it to your fluxible context :
 
 import googleMapsPlugin from 'fluxible-plugin-google-maps';
 
-app.plug(googleMapsPlugin());
+app.plug(googleMapsPlugin({
+  url: 'https://maps.googleapis.com/maps/api/js?libraries=places&callback=onGoogleMapsLoaded'
+  callbackName: 'onGoogleMapsLoaded'
+}));
 
 ```
 
